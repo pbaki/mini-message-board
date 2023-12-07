@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p 
+    a(href='/new') New Message
+  ul 
+    for message in messages
+      li #{message.user}: #{message.text} ///(#{message.added.toLocaleString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })})
